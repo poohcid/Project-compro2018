@@ -216,6 +216,143 @@ void home(){
 }
 ```
 
+### function eventMouseHome
+- อีเวนท์ของหน้าร้านค้า
+```
+void eventMouseHome(){
+    if (hover(500, 600, 100, 200) && money - price[0] >= 0){
+        changecolor(0);
+        type = 1;
+    }
+    else if (hover(500, 600, 250, 350) && money - price[1] >= 0){
+        changecolor(1);
+        type = 2;
+    }
+    else if (hover(500, 600, 400, 500) && money - price[2] >= 0){
+        changecolor(2);
+        type = 3;
+    }
+    else if (hover(500, 600, 550, 650) && money - price[3] >= 0){
+        changecolor(3);
+        type = 4;
+    }
+    else if (hover(800, 880, 550, 630)){
+        changecolor(4);
+        type = 5;
+    }
+    else if (hover(900, 1000, 250, 350))
+        type = 6;
+    else if (hover(1050, 1150, 250, 350))
+        type = 7;
+    else if (hover(900, 1000, 400, 500))
+        type = 8;
+    else if (hover(1050, 1150, 400, 500))
+        type = 9;
+    else if (hover(880, 960, 80, 160) && money - 100 >= 0){
+        changecolor(9);
+        type = 10;
+    }
+    else{
+        type = 0;
+        for (int i=0; i < 15; i++){
+            if ((i < 5 || i > 8) && i != 10){
+                rgb[i].r = 245;
+                rgb[i].g = 245;
+                rgb[i].b = 245;
+            }
+        }
+    }
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && type == 1){
+        level[0]++;
+        player[0] += 5 + GetRandomValue(5, 8);
+        money -= price[0];
+        price[0] += level[0]*30;
+    }
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && type == 2){
+        level[1]++;
+        player[1] += 5 + GetRandomValue(3, 5);
+        money -= price[1];
+        price[1] += level[1]*30;
+    }
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && type == 3){
+        level[2]++;
+        player[2] += 5 + GetRandomValue(5, 8);
+        money -= price[2];
+        price[2] += level[2]*30;
+    }
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && type == 4){
+        level[3]++;
+        player[3] += 5 + GetRandomValue(3, 5);
+        money -= price[3];
+        price[3] += level[3]*30;
+    }
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && type == 5){
+        if (type_player[0] == 0)
+            items_fight[0][0] = player[0], atk_player = LoadTexture("img/sword.png");
+        if (type_player[0] == 1)
+            items_fight[0][0] = player[2], atk_player = LoadTexture("img/wand.png");
+        if (type_player[1] == 0)
+            items_fight[0][1] = player[1], def_player = LoadTexture("img/armor.png");
+        if (type_player[1] == 1)
+            items_fight[0][1] = player[3], def_player = LoadTexture("img/shield.png");
+        if (type_boss[0] == 0 && type_boss[1] == 0){
+            lv[1]++;
+            text_boss = lv[1];
+            items_fight[1][0] = 35+(5*text_boss)+lv[0], items_fight[1][1] = 20+(3*text_boss)+lv[0];
+            hp_boss = 200+text_boss*20;
+            atk_boss = LoadTexture("img/sword.png");
+            def_boss = LoadTexture("img/armor.png");
+            enemy = LoadTexture("img/boss00.png");
+        }
+        if (type_boss[0] == 0 && type_boss[1] == 1){
+            lv[2]++;
+            text_boss = lv[2];
+            items_fight[1][0] = 35+(5*text_boss)+lv[0], items_fight[1][1] = 20+(3*text_boss)+lv[0];
+            hp_boss = 200+text_boss*20;
+            atk_boss = LoadTexture("img/sword.png");
+            def_boss = LoadTexture("img/shield.png");
+            enemy = LoadTexture("img/boss01.png");
+        }
+        if (type_boss[0] == 1 && type_boss[1] == 0){
+            lv[3]++;
+            text_boss = lv[3];
+            items_fight[1][0] = 35+(5*text_boss)+lv[0], items_fight[1][1] = 20+(3*text_boss)+lv[0];
+            hp_boss = 200+text_boss*20;
+            atk_boss = LoadTexture("img/wand.png");
+            def_boss = LoadTexture("img/armor.png");
+            enemy = LoadTexture("img/boss10.png");
+        }
+        if (type_boss[0] == 1 && type_boss[1] == 1){
+            lv[4]++;
+            text_boss = lv[4];
+            items_fight[1][0] = 35+(5*text_boss)+lv[0], items_fight[1][1] = 20+(3*text_boss)+lv[0];
+            hp_boss = 200+text_boss*20;
+            atk_boss = LoadTexture("img/wand.png");
+            def_boss = LoadTexture("img/shield.png");
+            enemy = LoadTexture("img/boss11.png");
+            
+        }
+        step = 2;
+    }
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && type == 6)
+        selectItems(1);
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && type == 7)
+        selectItems(2);
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && type == 8)
+        selectItems(3);
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && type == 9)
+        selectItems(4);
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && type == 10){
+        money -= 100;
+        int item = GetRandomValue(0, 1);
+        if (type_boss[item] == 0)
+            strcpy(omen, "physical");
+        if (type_boss[item] == 1)
+            strcpy(omen, "magic");
+    }
+}
+```
+
 ### function arena
 - การแสดงผลหน้าต่อสู้
 ```
@@ -251,6 +388,8 @@ void arena(){
     EndDrawing();
 }
 ```
+
+
 
 ### function resultGame 
 - การแสดงผลหน้าจบเกมเมื่อชนะและการเซตค่าต่างๆและเงินรางวัล
