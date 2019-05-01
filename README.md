@@ -9,6 +9,9 @@
 ## รายละเอียดของโปรเจคเกม
 ### ภาษาคอมพิวเตอร์ใช้พัฒนาตัวโปรเจคเกม
 [![c-plus-plus-logo.png](https://www.img.live/images/2019/05/01/c-plus-plus-logo.png)](https://www.img.live/image/7L7TJH)
+### library หลักที่ใช้พัฒนาตัวโปรเจคเกม
+[![raylib_logo_card.png](https://www.img.live/images/2019/05/01/raylib_logo_card.png)](https://www.img.live/image/7LOLrt)<br/>
+เพิ่มเติมเกี่ยวกับ raylib https://www.raylib.com/
 ### วิธีการเล่น
 [![player2.gif](https://www.img.live/images/2019/05/01/player2.gif)](https://www.img.live/image/7L7Loy)
 ตัวละคร
