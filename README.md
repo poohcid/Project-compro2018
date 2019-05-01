@@ -84,3 +84,71 @@ Texture2D fight_img, atk_img, def_img, grave, lucifer, worrior;
 Texture2D atk_player, def_player, atk_boss, def_boss, background_start, background_arena;
 Font font1;
 ```
+
+### function main
+```
+int main(){
+    const int WindowWidth = 1280;
+    const int WindowHeight = 720;
+    for (int i=0; i < 10; i++)
+        level[i] = 1;
+    
+    InitWindow(WindowWidth, WindowHeight, "Hero Never Die");
+    SetTargetFPS(60);
+    randomBoss();
+    selectItems(1);
+    selectItems(3);
+    strcpy(omen, "");
+    strcpy(buff_textB, "");
+             /*ดึงไฟล์รุปที่ต้องใช้*/
+    sword = LoadTexture("img/sword.png");
+    armor = LoadTexture("img/armor.png");
+    wand = LoadTexture("img/wand.png");
+    shield = LoadTexture("img/shield.png");
+    eye = LoadTexture("img/eye.png");
+    man = LoadTexture("img/frame_player2/frameA.png");
+    battle = LoadTexture("img/battle.png");
+    fight_img = LoadTexture("img/fight.png");
+    atk_img = LoadTexture("img/atk.png");
+    def_img = LoadTexture("img/def.png");
+    grave = LoadTexture("img/grave.png");
+    lucifer = LoadTexture("img/lucifer.png");
+    worrior = LoadTexture("img/warrior.png");
+    font1 = LoadFont("font/romulus.png");
+    background_start = LoadTexture("img/background_start.png");
+    background_arena = LoadTexture("img/background_arena2.png");
+    SetWindowIcon(GetTextureData(battle));
+    while (!WindowShouldClose()){
+        /*ลูปที่จะทำให้หน้าเกมรันตลอดเวลา*/
+        item_change();
+        if (step == 0)
+            start(); // หน้าเริ่มเกม
+        if (step == 1){
+            home(); //หน้าร้านค้า
+            eventMouseHome();
+            if (step_arena == 0)
+                delayAnimetion('Q');
+        }
+        if (step == 2){
+            arena(); //หน้าต่อสู้
+            eventArena();
+            if (step_arena == 0)
+                delayAnimetion('Q');
+            if (step_arena == 1){
+                delayFight();
+            }
+            if (step_arena == 2){
+                delayBuff(2, "+ATK");
+            }
+            if (step_arena == 3){
+                delayBuff(3, "+DEF");
+            }
+        }
+        if (step == 3)
+            resultGame(); //หน้าชนะการต่อสู้
+        if (step == 4)
+            lose(); //หน้าแพ้
+    }
+    return 0;
+}
+```
