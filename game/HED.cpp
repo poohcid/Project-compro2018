@@ -19,34 +19,35 @@ void selectItems(int typeItems);
 void randomBoss();
 void item_change();
 
-int level[10];
-int step = 0;
+int level[10];  //เลเวลของอาวุธ
+int step = 0;   //ตัวบอกว่าจะไปหน้าไหน
 struct color{
-    int r=245, g=245, b=245;
+    int r=245, g=245, b=245;  //ตัวเก็บข้อมูลสีที่ต้องใช้ในส่วนต่างๆ
 }rgb[30];
-int money = 0;
-int type = 0;
-int lv[] = {1, 0, 0, 0, 0};
-float lv_bar = 0;
-float hp_player_bar = 200, hp_boss_bar = 200;
-int hp_player = 200, hp_boss = 180;
-int boss[4][2] = {{35, 20}, {35, 20}, {35, 20}, {35, 20}};
-int type_boss[] = {0, 0};
-int player[] = {40, 20, 40, 20};
-int items[] = {0, 0, 0, 0};
-int price[] = {20, 20, 20, 20};
-int type_player[] = {0, 0};
-char omen[20];
-int buff[] = {0, 0, 0, 0};
-int items_fight[2][2];
-int step_arena=0;
-int count = 1;
-int text_boss;
-int price_lv = 10;
-char buff_textB[5];
-int buff_posit = 100;
-int posit_player = 130, posit_boss = 850;
-int mode_player = 0, mode_boss = 0;
+int money = 0; //เงินของตัวละคร
+int type = 0;  //ค่าที่บอกประเภทของปุ่มกด
+int lv[] = {1, 0, 0, 0, 0};   //index[0]คือเลวลตัวละคร
+float lv_bar = 0;  //หลอดเลเวล
+float hp_player_bar = 200, hp_boss_bar = 200;  //หลอดเลือดตัวละครและบอส
+int hp_player = 200, hp_boss = 180;  //ค่าเลือดตัวละครและบอส
+int boss[4][2] = {{35, 20}, {35, 20}, {35, 20}, {35, 20}}; //ค่าพลังโจมตี ป้องกันของบอสแต่ละตัว
+int type_boss[] = {0, 0}; //ค่าที่บอกประเภทบอส 0 กายภาพ 1 เวทมนตร์
+int player[] = {40, 20, 40, 20}; //ค่าพลังโจมตีและพลังป้องกันของตัวละคร
+int items[] = {0, 0, 0, 0}; // กระเป๋าใส่ไอเทม index 0, 2 อาวุธกายภาพ, เวท   1, 3  ป้องกันกายภาพ, เวท   ค่าใดเป็น 1 คือเก็บอุปกรณ์นั้นๆ
+int price[] = {20, 20, 20, 20};  //ราคาอาวุธ
+int type_player[] = {0, 0}; //ค่าที่บอกว่าตกระเป๋าตัวละครของเราเป็นอาวุธประเภทไหน
+char omen[20];  //ข้อความลางบอกเหตุ
+int buff[] = {0, 0, 0, 0}; //ค่าบัฟต่างๆ
+int items_fight[2][2]; //พลังอาวุธของตัวละครและบอสในด่านนั้นๆ ที่จะมาวัดพลังกัน
+int step_arena=0; //ค่าที่บอกว่าจะใช้ฟังก์ชั่น delay อะไรในระหว่างการต่อสู้
+int count = 1; //ตัวนับค่า delay
+int text_boss; // level ของบอสที่จะต่อสู้ในการประลอง
+int price_lv = 10; //ค่าที่เพิ่มเงินรางวัลตามเลเวลของบอสที่ชนะ
+char buff_textB[5]; //ตัวอักษรประเภทบัฟที่โชว์บนตัวละครและบอส
+int buff_posit = 100; //ตำแหน่งของตัวอักษรบัฟ
+int posit_player = 130, posit_boss = 850; //ตำแหน่งของตัวละครที่จะต้องมีการเลื่อนไปมา
+int mode_player = 0, mode_boss = 0; //สถานะว่าตัวละครนั้นโจมตีหรือไม่ ถ้าโจมตีจะมีค่่าเท่ากับ 1
+                   /*รุปภาพต่าง*/
 Texture2D sword, armor, wand, shield, eye, man, battle, enemy;
 Texture2D fight_img, atk_img, def_img, grave, lucifer, worrior;
 Texture2D atk_player, def_player, atk_boss, def_boss, background_start, background_arena;
@@ -65,6 +66,7 @@ int main(){
     selectItems(3);
     strcpy(omen, "");
     strcpy(buff_textB, "");
+             /*ดึงไฟล์รุปที่ต้องใช้*/
     sword = LoadTexture("img/sword.png");
     armor = LoadTexture("img/armor.png");
     wand = LoadTexture("img/wand.png");
@@ -83,17 +85,18 @@ int main(){
     background_arena = LoadTexture("img/background_arena2.png");
     SetWindowIcon(GetTextureData(battle));
     while (!WindowShouldClose()){
+        /*ลูปที่จะทำให้หน้าเกมรันตลอดเวลา*/
         item_change();
         if (step == 0)
-            start();
+            start(); // หน้าเริ่มเกม
         if (step == 1){
-            home();
+            home(); //หน้าร้านค้า
             eventMouseHome();
             if (step_arena == 0)
                 delayAnimetion('Q');
         }
         if (step == 2){
-            arena();
+            arena(); //หน้าต่อสู้
             eventArena();
             if (step_arena == 0)
                 delayAnimetion('Q');
@@ -108,14 +111,15 @@ int main(){
             }
         }
         if (step == 3)
-            resultGame();
+            resultGame(); //หน้าชนะการต่อสู้
         if (step == 4)
-            lose();
+            lose(); //หน้าแพ้
     }
     return 0;
 }
 
 float fight(int atk, int def, int type1, int type2){
+    /*คำนวนความเสียหายที่ได้รับ ยิ่งอาวุธต่างประเภทกันความเสียหายยิ่งมาก*/
     float result;
     if (type1 == type2)
         result = atk - def;
@@ -128,6 +132,7 @@ float fight(int atk, int def, int type1, int type2){
 }
 
 void delayFight(){
+    /*ตัวละครเคลื่นไหวและต่อสู้กัน*/
     static float time = 0.0f;
     time += GetFrameTime();
     int stop=0;
@@ -166,6 +171,7 @@ void delayFight(){
 }
 
 void delayBuff(int type_buff, char text[]){
+    /*animetion ตอนโจมตี*/
     static float time = 0.0f;
     time += GetFrameTime();
     if (time >= 0.5f){
@@ -191,6 +197,7 @@ void delayBuff(int type_buff, char text[]){
 }
 
 void delayAnimetion(char frame){
+    /*animetion ตัวละคร*/
     static char count = 'A';
     static float time = 0.0f;
     char select[28] = "";
@@ -209,6 +216,7 @@ void delayAnimetion(char frame){
 }
 
 void home(){
+    /*หน้าแสดงผลร้านค้า*/
     BeginDrawing();
     ClearBackground(RAYWHITE);
     DrawRectangle(500, 100, 100, 100, Color{rgb[0].r, rgb[0].g, rgb[0].b, 255}); //player
@@ -254,6 +262,7 @@ void home(){
 }
 
 void arena(){
+    /*หน้าแสดงผลลานประลอง*/
     BeginDrawing();
     ClearBackground(RAYWHITE);
     DrawTexture(background_arena, 0, 110, RAYWHITE);
@@ -286,6 +295,7 @@ void arena(){
 }
 
 void resultGame(){
+    /*หน้าผลสรุปเกมเมื่อชนะและคำนวนรางวัล*/
     int price_lv=0;
     int sur=0;
     int total=0;
@@ -346,6 +356,7 @@ void resultGame(){
 }
 
 void lose(){
+    /*หน้าแสดงผลเมื่อแพ้*/
     int check=0;
     BeginDrawing();
     ClearBackground(RAYWHITE);
@@ -367,6 +378,7 @@ void lose(){
 }
 
 void start(){
+    /*หน้าเริ่มเกม*/
     int i;
     BeginDrawing();
     ClearBackground(RAYWHITE);
@@ -409,6 +421,7 @@ void start(){
 }
 
 void eventMouseHome(){
+    /*อีเว้นท์ต่างๆในหน้าร้านค้า*/
     if (hover(500, 600, 100, 200) && money - price[0] >= 0){
         changecolor(0);
         type = 1;
@@ -542,6 +555,7 @@ void eventMouseHome(){
 }
 
 void eventArena(){
+    /*อีเว้นท์ต่างๆในหน้าลานประลอง*/
     if (hp_boss_bar <= 0){
         step = 3;
         price_lv += text_boss*10;
@@ -598,6 +612,7 @@ void eventArena(){
 }
 
 int hover(int x1, int x2, int y1, int y2){
+    /*เชคการสัมผัสปุ่ม*/
     int mx = GetMouseX();
     int my = GetMouseY();
     if (mx > x1 && mx < x2 && my > y1 && my < y2)
@@ -607,12 +622,14 @@ int hover(int x1, int x2, int y1, int y2){
 }
 
 void changecolor(int button){
+    /*เปลี่ยนสีเป็นสีเทา*/
     rgb[button].r = 220;
     rgb[button].g = 220;
     rgb[button].b = 220;
 }
 
 void selectItems(int typeItems){
+    /*สลับปรับเปลี่ยนไอเทม*/
     man = LoadTexture("img/frame_player/frame1.png");
     if (typeItems == 1)
         items[typeItems-1] = 1;
@@ -646,11 +663,13 @@ void selectItems(int typeItems){
 }
 
 void randomBoss(){
+    /*สุ่มบอส*/
     type_boss[0] = GetRandomValue(0, 1);
     type_boss[1] = GetRandomValue(0, 1);
 }
 
 void item_change(){
+    /*decode เปลี่ยนค่าการบ่งบอกถึงชนิดอาวุธ*/
     if (items[0] == 1)
         type_player[0] = 0;
     if (items[1] == 1)
