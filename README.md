@@ -155,3 +155,88 @@ int main(){
     return 0;
 }
 ```
+
+### function home 
+- การแสดงผลหน้าร้านค้า
+```
+void home(){
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawRectangle(500, 100, 100, 100, Color{rgb[0].r, rgb[0].g, rgb[0].b, 255}); //player
+    DrawRectangle(500, 250, 100, 100, Color{rgb[1].r, rgb[1].g, rgb[1].b, 255});
+    DrawRectangle(500, 400, 100, 100, Color{rgb[2].r, rgb[2].g, rgb[2].b, 255});
+    DrawRectangle(500, 550, 100, 100, Color{rgb[3].r, rgb[3].g, rgb[3].b, 255});
+    DrawRectangle(800, 550, 80, 80, Color{rgb[4].r, rgb[4].g, rgb[4].b, 255});
+    DrawText(FormatText("Lv. %d", level[0]), 520, 200, 20, BLACK);
+    DrawText(FormatText("Lv. %d", level[1]), 520, 350, 20, BLACK);
+    DrawText(FormatText("Lv. %d", level[2]), 520, 500, 20, BLACK);
+    DrawText(FormatText("Lv. %d", level[3]), 520, 650, 20, BLACK);
+    DrawRectangle(900, 250, 100, 100, Color{rgb[5].r, rgb[5].g, rgb[5].b, 255});
+    DrawRectangle(1050, 250, 100, 100, Color{rgb[6].r, rgb[6].g, rgb[6].b, 255});
+    DrawRectangle(900, 400, 100, 100, Color{rgb[7].r, rgb[7].g, rgb[7].b, 255});
+    DrawRectangle(1050, 400, 100, 100, Color{rgb[8].r, rgb[8].g, rgb[8].b, 255});
+    DrawRectangle(700, 0, 30, 730, Color{0, 0, 0, 255});
+    DrawText(FormatText("$ %d", price[0]), 400, 150, 30, GREEN);
+    DrawText(FormatText("$ %d", price[1]), 400, 300, 30, GREEN);
+    DrawText(FormatText("$ %d", price[2]), 400, 450, 30, GREEN);
+    DrawText(FormatText("$ %d", price[3]), 400, 600, 30, GREEN);
+    DrawText(FormatText("money: %d $", money), 10, 20, 50, GREEN);
+    DrawText(FormatText("$ 100"), 750, 85, 40, GREEN);
+    //DrawText(FormatText("%d %d", type_boss[0], type_boss[1]), 50, 300, 50, RED);
+    DrawRectangle(880, 80, 80, 80, Color{rgb[9].r, rgb[9].g, rgb[9].b, 255});
+    DrawText(FormatText("%s", omen), 980, 110, 30, RED);
+    DrawTextureEx(man, Vector2{40, 130},0, 0.9, RAYWHITE);
+    DrawText(FormatText("Lv. %d", lv[0]), 50, 450, 40, BLACK);
+    DrawRectangle(180, 450, lv_bar, 40, GREEN);
+    DrawRectangleLinesEx(Rectangle{180, 450, 200, 40}, 2, BLACK);
+    DrawTexture(sword, 500, 100, RAYWHITE);
+    DrawTexture(armor, 500, 250, RAYWHITE);
+    DrawTexture(wand, 500, 400, RAYWHITE);
+    DrawTexture(shield, 500, 550, RAYWHITE);
+    DrawTexture(eye, 880, 80, RAYWHITE);
+    DrawText("Select Items", 900, 200, 40, BLACK);
+    DrawTexture(sword, 900, 250, RAYWHITE);
+    DrawTexture(wand, 1050, 250, RAYWHITE);
+    DrawTexture(armor, 900, 400, RAYWHITE);
+    DrawTexture(shield, 1050, 400, RAYWHITE);
+    DrawTextureEx(battle, Vector2{800, 550}, 0, 0.6, RAYWHITE);
+    DrawText("Fight", 930, 580, 40, RED);
+    EndDrawing();
+}
+```
+
+### function arena
+- การแสดงผลหน้าต่อสู้
+```
+void arena(){
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawTexture(background_arena, 0, 110, RAYWHITE);
+    DrawTexture(background_arena, 0, -150, RAYWHITE);
+    DrawTextureEx(man, Vector2{posit_player, 230}, 0, 0.6, RAYWHITE);
+    DrawTexture(enemy, posit_boss, 200, RAYWHITE);
+    DrawTextureEx(worrior, Vector2{400, 100}, 0, 0.7, RAYWHITE);
+    DrawTextureEx(lucifer, Vector2{400, 200}, 0, 0.7, RAYWHITE);
+    DrawTextureEx(atk_player, Vector2{520, 100}, 0, 0.7, RAYWHITE);
+    DrawTextureEx(def_player, Vector2{620, 100}, 0, 0.7, RAYWHITE);
+    DrawTextureEx(atk_boss, Vector2{520, 200}, 0, 0.7, RAYWHITE);
+    DrawTextureEx(def_boss, Vector2{620, 200}, 0, 0.7, RAYWHITE);
+    DrawText(FormatText("%s", buff_textB), buff_posit, 150, 40, Color{rgb[10].r, rgb[10].g, rgb[10].b, 255});
+    DrawRectangle(100, 450, hp_player_bar, 30, RED); //hp player
+    DrawRectangle(900, 450, hp_boss_bar, 30, RED); //hp boss
+    DrawText(FormatText("Lv. %d", text_boss), 900, 100, 40, BLACK);
+    DrawText(FormatText("Lv. %d", lv[0]), 100, 100, 40, BLACK);
+    DrawRectangleLinesEx(Rectangle{100, 450, 200, 30}, 2, BLACK); //border hp player
+    DrawRectangleLinesEx(Rectangle{900, 450, 200, 30}, 2, BLACK); //border hp boss
+    DrawRectangleLinesEx(Rectangle{400, 550, 100, 100}, 3, BLACK);
+    DrawRectangleLinesEx(Rectangle{550, 550, 100, 100}, 3, BLACK);
+    DrawRectangleLinesEx(Rectangle{700, 550, 100, 100}, 3, BLACK);
+    DrawTexture(fight_img, 400, 550, RAYWHITE);
+    DrawTexture(atk_img, 550, 550, RAYWHITE);
+    DrawTexture(def_img, 700, 550, RAYWHITE);
+    DrawText("A", 370, 500, 50, RED);
+    DrawText("S", 520, 500, 50, RED);
+    DrawText("D", 670, 500, 50, RED);
+    EndDrawing();
+}
+```
