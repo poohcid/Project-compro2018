@@ -36,3 +36,10 @@
 [![boss11.png](https://www.img.live/images/2019/05/01/boss11.png)](https://www.img.live/image/7L7f59)
 [![wand.png](https://www.img.live/images/2019/05/01/wand.png)](https://www.img.live/image/7L74M4)
 [![shield.png](https://www.img.live/images/2019/05/01/shield.png)](https://www.img.live/image/7L7SYc)<br /><br>
+
+
+# Group members
+1.นายชยภัทร พันรอด 61070036 <br>
+2.นายภูชิต รุ่งระวิ 61070166 <br>
+3.นายโยธิน บายศรี 61070179 <br>
+4.นายอนุชา เว่ย 61070257 <br>
