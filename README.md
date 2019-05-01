@@ -44,7 +44,10 @@
 ## รูปแบบของเกม
 <b>เกมจะแบ่งออกเป็น 2 หน้า</b> <br> 1.หน้าร้านค้า <br> 2.หน้าเลือกอาวุธ <br>
 ![57423165_358293301474163_3994025551818915840_n](https://user-images.githubusercontent.com/42909745/57022713-24b1cf80-6c5a-11e9-8255-af09be7b5ddc.png)
-<b>ในส่วนของหน้าร้านค้านั้นจะมี</b><br> 1.ปุ่มอัพเกรดอาวุธของแต่ละชนิด <br>
+<b>ในส่วนของหน้าร้านค้านั้นจะมี</b><br>
+[![shop.jpg](https://www.img.live/images/2019/05/01/shop.jpg)](https://www.img.live/image/7L8UN6)
+1.ปุ่มอัพเกรดอาวุธของแต่ละชนิด <br>
+[![eye.jpg](https://www.img.live/images/2019/05/01/eye.jpg)](https://www.img.live/image/7L8D0g)
 2.ปุ่มดวงตาซื้อคำทำนายลวงหน้าว่าจะเจออาวุธประเภทอะไร <br>
 [![select.jpg](https://www.img.live/images/2019/05/01/select.jpg)](https://www.img.live/image/7L8yNn)
 3.ช่องให้เลือกว่าจะเอาอาวุธอะไรไปสู้ในรอบถัดไป <br> 4.กดต่อสู้ <br>
