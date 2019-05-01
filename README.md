@@ -23,3 +23,14 @@
 - ป้องกันไม่ได้
 ### ประเภทของบอสทั้งหมด
 [![00.gif](https://www.img.live/images/2019/05/01/00.gif)](https://www.img.live/image/7L7FOi)
+[![sword.png](https://www.img.live/images/2019/05/01/sword.png)](https://www.img.live/image/7L41Ki)
+[![armor.png](https://www.img.live/images/2019/05/01/armor.png)](https://www.img.live/image/7L4mNy)<br /><br>
+[![01.gif](https://www.img.live/images/2019/05/01/01.gif)](https://www.img.live/image/7L7HRY)
+[![sword.png](https://www.img.live/images/2019/05/01/sword.png)](https://www.img.live/image/7L41Ki)
+[![shield.png](https://www.img.live/images/2019/05/01/shield.png)](https://www.img.live/image/7L7SYc)<br /><br>
+[![10.gif](https://www.img.live/images/2019/05/01/10.gif)](https://www.img.live/image/7L7b3n)
+[![wand.png](https://www.img.live/images/2019/05/01/wand.png)](https://www.img.live/image/7L74M4)
+[![armor.png](https://www.img.live/images/2019/05/01/armor.png)](https://www.img.live/image/7L4mNy)<br /><br>
+[![111.gif](https://www.img.live/images/2019/05/01/111.gif)](https://www.img.live/image/7L7i2u)
+[![wand.png](https://www.img.live/images/2019/05/01/wand.png)](https://www.img.live/image/7L74M4)
+[![shield.png](https://www.img.live/images/2019/05/01/shield.png)](https://www.img.live/image/7L7SYc)<br /><br>
