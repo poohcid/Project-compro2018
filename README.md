@@ -46,3 +46,41 @@
 
 # Introduction Video
 Youtube: 
+
+# source code
+### global variable
+```
+int level[10];  //เลเวลของอาวุธ
+int step = 0;   //ตัวบอกว่าจะไปหน้าไหน
+struct color{
+    int r=245, g=245, b=245;  //ตัวเก็บข้อมูลสีที่ต้องใช้ในส่วนต่างๆ
+}rgb[30];
+int money = 0; //เงินของตัวละคร
+int type = 0;  //ค่าที่บอกประเภทของปุ่มกด
+int lv[] = {1, 0, 0, 0, 0};   //index[0]คือเลวลตัวละคร
+float lv_bar = 0;  //หลอดเลเวล
+float hp_player_bar = 200, hp_boss_bar = 200;  //หลอดเลือดตัวละครและบอส
+int hp_player = 200, hp_boss = 180;  //ค่าเลือดตัวละครและบอส
+int boss[4][2] = {{35, 20}, {35, 20}, {35, 20}, {35, 20}}; //ค่าพลังโจมตี ป้องกันของบอสแต่ละตัว
+int type_boss[] = {0, 0}; //ค่าที่บอกประเภทบอส 0 กายภาพ 1 เวทมนตร์
+int player[] = {40, 20, 40, 20}; //ค่าพลังโจมตีและพลังป้องกันของตัวละคร
+int items[] = {0, 0, 0, 0}; // กระเป๋าใส่ไอเทม index 0, 2 อาวุธกายภาพ, เวท   1, 3  ป้องกันกายภาพ, เวท   ค่าใดเป็น 1 คือเก็บอุปกรณ์นั้นๆ
+int price[] = {20, 20, 20, 20};  //ราคาอาวุธ
+int type_player[] = {0, 0}; //ค่าที่บอกว่าตกระเป๋าตัวละครของเราเป็นอาวุธประเภทไหน
+char omen[20];  //ข้อความลางบอกเหตุ
+int buff[] = {0, 0, 0, 0}; //ค่าบัฟต่างๆ
+int items_fight[2][2]; //พลังอาวุธของตัวละครและบอสในด่านนั้นๆ ที่จะมาวัดพลังกัน
+int step_arena=0; //ค่าที่บอกว่าจะใช้ฟังก์ชั่น delay อะไรในระหว่างการต่อสู้
+int count = 1; //ตัวนับค่า delay
+int text_boss; // level ของบอสที่จะต่อสู้ในการประลอง
+int price_lv = 10; //ค่าที่เพิ่มเงินรางวัลตามเลเวลของบอสที่ชนะ
+char buff_textB[5]; //ตัวอักษรประเภทบัฟที่โชว์บนตัวละครและบอส
+int buff_posit = 100; //ตำแหน่งของตัวอักษรบัฟ
+int posit_player = 130, posit_boss = 850; //ตำแหน่งของตัวละครที่จะต้องมีการเลื่อนไปมา
+int mode_player = 0, mode_boss = 0; //สถานะว่าตัวละครนั้นโจมตีหรือไม่ ถ้าโจมตีจะมีค่่าเท่ากับ 1
+                   /*รุปภาพต่าง*/
+Texture2D sword, armor, wand, shield, eye, man, battle, enemy;
+Texture2D fight_img, atk_img, def_img, grave, lucifer, worrior;
+Texture2D atk_player, def_player, atk_boss, def_boss, background_start, background_arena;
+Font font1;
+```
