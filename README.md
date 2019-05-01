@@ -1,21 +1,12 @@
 # Project-ComPro 2018
   เกมนักสู้อมตะ(Game Hero Never Die) นี้มีจุดมีประสงค์จัดทำเพื่อความบันเทิงและการฝึกทักษะการจัดการทรัพยากร เกมนักสู้อมตะเป็นเกมที่พัฒนาจากภาษา C โดยลักษณะของเกมจะมีบอสเข้ามาให้เราตีเรื่อยๆ เมื่อเราตีบอสจนชนะเราก็จะสามารถผ่านด่านนั้นไปได้และเมื่อเราชนะเราจะสามารถอัพเกรดตัวละครของเราให้แข็งแกร่งขึ้นได้โดยบอสของแต่ละด่านนั้นก็จะเพิ่มความยากขึ้นไปเรื่อยๆ ถ้าเราไม่สามารถเอาชนะบอสในด่านนั้นได้ก็จะถือว่าจบเกม
-# Group members
-1.นายชยภัทร พันรอด 61070036 <br>
-2.นายภูชิต รุ่งระวิ 61070166 <br>
-3.นายโยธิน บายศรี 61070179 <br>
-4.นายอนุชา เว่ย 61070257 <br>
-# Introduction Video
-# รายละเอียดของโปรเจคเกม
-## ภาษาคอมพิวเตอร์ใช้พัฒนาตัวโปรเจคเกม
+## รายละเอียดของโปรเจคเกม
+### ภาษาคอมพิวเตอร์ใช้พัฒนาตัวโปรเจคเกม
 [![c-plus-plus-logo.png](https://www.img.live/images/2019/05/01/c-plus-plus-logo.png)](https://www.img.live/image/7L7TJH)
-## library หลักที่ใช้พัฒนาตัวโปรเจคเกม
-[![raylib_logo_card.png](https://www.img.live/images/2019/05/01/raylib_logo_card.png)](https://www.img.live/image/7LOLrt)<br/>
-เพิ่มเติมเกี่ยวกับ raylib https://www.raylib.com/
-## วิธีการเล่น
+### วิธีการเล่น
 [![player2.gif](https://www.img.live/images/2019/05/01/player2.gif)](https://www.img.live/image/7L7Loy)
 ตัวละคร
-#### ประเภทอาวุธ
+##### ประเภทอาวุธ
 [![sword.png](https://www.img.live/images/2019/05/01/sword.png)](https://www.img.live/image/7L41Ki)
 โจมตีกายภาพ
 [![armor.png](https://www.img.live/images/2019/05/01/armor.png)](https://www.img.live/image/7L4mNy)
@@ -24,7 +15,7 @@
 โจมตีเวท
 [![shield.png](https://www.img.live/images/2019/05/01/shield.png)](https://www.img.live/image/7L7SYc)
 ป้องกันเวท
-#### กฎของเกม
+##### กฎของเกม
 เกราะจะต้องเป็นประเภทเดียวกับอาวุธ จึงจะสามารถป้องกันได้ <br /><br/>
 [![sword.png](https://www.img.live/images/2019/05/01/sword.png)](https://www.img.live/image/7L41Ki)
 [![armor.png](https://www.img.live/images/2019/05/01/armor.png)](https://www.img.live/image/7L4mNy)
@@ -32,7 +23,7 @@
 [![sword.png](https://www.img.live/images/2019/05/01/sword.png)](https://www.img.live/image/7L41Ki)
 [![shield.png](https://www.img.live/images/2019/05/01/shield.png)](https://www.img.live/image/7L7SYc)
 - ป้องกันไม่ได้
-#### ประเภทของบอสทั้งหมด
+##### ประเภทของบอสทั้งหมด
 [![boss00.png](https://www.img.live/images/2019/05/01/boss00.png)](https://www.img.live/image/7L7pTc)
 [![sword.png](https://www.img.live/images/2019/05/01/sword.png)](https://www.img.live/image/7L41Ki)
 [![armor.png](https://www.img.live/images/2019/05/01/armor.png)](https://www.img.live/image/7L4mNy)<br /><br>
@@ -46,3 +37,12 @@
 [![wand.png](https://www.img.live/images/2019/05/01/wand.png)](https://www.img.live/image/7L74M4)
 [![shield.png](https://www.img.live/images/2019/05/01/shield.png)](https://www.img.live/image/7L7SYc)<br /><br>
 
+
+# Group members
+1.นายชยภัทร พันรอด 61070036 <br>
+2.นายภูชิต รุ่งระวิ 61070166 <br>
+3.นายโยธิน บายศรี 61070179 <br>
+4.นายอนุชา เว่ย 61070257 <br>
+
+# Introduction Video
+Youtube: 
