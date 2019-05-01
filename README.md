@@ -48,7 +48,7 @@
 [![shop.jpg](https://www.img.live/images/2019/05/01/shop.jpg)](https://www.img.live/image/7L8UN6)
 1.ปุ่มอัพเกรดอาวุธของแต่ละชนิด <br>
 [![eye.jpg](https://www.img.live/images/2019/05/01/eye.jpg)](https://www.img.live/image/7L8D0g)
-2.ปุ่มดวงตาซื้อคำทำนายลวงหน้าว่าจะเจออาวุธประเภทอะไร <br>
+2.ปุ่มดวงตาซื้อคำทำนายลวงหน้าว่าจะเจอ1บอสที่ถืออาวุธหรือเกราะประเภทอะไร <br>
 [![select.jpg](https://www.img.live/images/2019/05/01/select.jpg)](https://www.img.live/image/7L8yNn)
 3.ช่องให้เลือกว่าจะเอาอาวุธอะไรไปสู้ในรอบถัดไป <br> 4.กดต่อสู้ <br>
 
