@@ -6,9 +6,9 @@
 ## library หลักที่ใช้พัฒนาตัวโปรเจคเกม
 [![raylib_logo_card.png](https://www.img.live/images/2019/05/01/raylib_logo_card.png)](https://www.img.live/image/7LOLrt)<br/>
 เพิ่มเติมเกี่ยวกับ raylib https://www.raylib.com/
-## วิธีการเล่น
+## :book:คู่มือการเล่น
+ตัวละคร<br>
 [![player2.gif](https://www.img.live/images/2019/05/01/player2.gif)](https://www.img.live/image/7L7Loy)
-ตัวละคร
 #### ประเภทอาวุธ
 [![sword.png](https://www.img.live/images/2019/05/01/sword.png)](https://www.img.live/image/7L41Ki)
 โจมตีกายภาพ
@@ -40,6 +40,15 @@
 [![wand.png](https://www.img.live/images/2019/05/01/wand.png)](https://www.img.live/image/7L74M4)
 [![shield.png](https://www.img.live/images/2019/05/01/shield.png)](https://www.img.live/image/7L7SYc)<br /><br>
 
+
+## รูปแบบของเกม
+<b>เกมจะแบ่งออกเป็น 2 หน้า</b> <br> 1.หน้าร้านค้า <br> 2.หน้าเลือกอาวุธ <br>
+<b>ในส่วนของหน้าร้านค้านั้นจะมี</b><br> 1.ปุ่มอัพเกรดอาวุธของแต่ละชนิด <br>
+2.ปุ่มดวงตาซื้อคำทำนายลวงหน้าว่าจะเจออาวุธประเภทอะไร <br>
+3.ช่องให้เลือกว่าจะเอาอาวุธอะไรไปสู้ในรอบถัดไป <br> 4.กดต่อสู้ <br>
+
+## :video_game:วิธีการเล่นเกม 
+กด A ตี <br> กด S บัฟเพิ่มโจมตี <br> กด D บัฟเพิ่มป้องกัน <br> <b>***เพิ่มเติม*** ถ้าเรากดตีบอสจะไม่บัพอะไรทั้งสิ้นแต่ถ้าเรากดบัฟบอสจะมีโอกาสบัฟตัวเอง </b><br>
 
 # Group members
 1.นายชยภัทร พันรอด 61070036 <br>
