@@ -249,3 +249,138 @@ void arena(){
     EndDrawing();
 }
 ```
+
+### function resultGame 
+- การแสดงผลหน้าจบเกมเมื่อชนะและการเซตค่าต่างๆและเงินรางวัล
+```
+void resultGame(){
+    int price_lv=0;
+    int sur=0;
+    int total=0;
+    int go=0;
+    float result;
+    for (int i=0; i < 4; i++)
+        buff[i] = 0;
+    price_lv += 40+text_boss*10;
+    if (type_player[0] == type_boss[1])
+        sur += text_boss*10;
+    if (type_player[1] != type_boss[0])
+        sur += text_boss*10;
+    if (type_player[1] != type_boss[0] && type_player[0] == type_boss[1])
+        sur += text_boss*10;
+    total += 40+price_lv+sur;
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawText(FormatText("Winner +%d $", 40+price_lv), 400, 100, 50, GREEN);
+    DrawText(FormatText("Bonus survivor +%d $", sur), 400, 200, 50, GREEN);
+    DrawText(FormatText("Total %d $", total), 400, 300, 50, GREEN);
+    if (hover(400, 700, 550, 660)){
+        DrawRectangle(400, 550, 300, 100, WHITE);
+        DrawText("Go Home", 420, 570, 60, BLACK);
+        go = 1;
+    }
+    else{
+        DrawRectangle(400, 550, 300, 100, BLACK);
+        DrawText("Go Home", 420, 570, 60, WHITE);
+    }
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && go == 1){
+        randomBoss();
+        money += total;
+        result = (text_boss/(lv[0]+0.75))*200;
+        lv_bar += result;
+        while (lv_bar >= 200){
+            lv[0]++;
+            hp_player = 50+lv[0]*20;
+            lv_bar -= 200;
+        }
+        hp_boss_bar = 200;
+        hp_player_bar = 200;
+        strcpy(omen, "");
+        count = 1;
+        step_arena = 0;
+        /*
+        if (type_boss[0] == 0 && type_boss[1] == 0)
+            boss[0][0] = 30*lv[1], boss[0][1] = 20*lv[1];
+        if (type_boss[0] == 0 && type_boss[1] == 1)
+            boss[1][0] = 30*lv[2], boss[1][1] = 20*lv[2];
+        if (type_boss[0] == 1 && type_boss[1] == 0)
+            boss[2][0] = 30*lv[3], boss[2][1] = 20*lv[3];
+        if (type_boss[0] == 1 && type_boss[1] == 1)
+            boss[3][0] = 30*lv[4], boss[3][1] = 20*lv[4];
+        */
+        step = 1;
+    }
+    EndDrawing();
+}
+```
+
+### function lose
+- หน้าแสดงผลจบเกม เมื่อแพ้
+```
+void lose(){
+    int check=0;
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawText("You lose", 400, 100, 80, BLUE);
+    DrawText(FormatText("Score: Lv. %d", lv[0]), 400, 200, 50, BLACK);
+    DrawTextureEx(grave, Vector2{400, 300}, 0, 3, RAYWHITE);
+    DrawRectangle(800, 450, 250, 100, BLACK);
+    DrawText("Replay", 825, 470, 60, WHITE);
+    if (hover(800, 1050, 450, 550)){
+        DrawRectangle(800, 450, 250, 100, WHITE);
+        DrawText("Replay", 825, 470, 60, BLACK);
+        check = 1;
+    }
+    else
+        check = 0;
+    if (IsMouseButtonPressed(MOUSE_LEFT_BUTTON) && check == 1)
+        step = 0;
+    EndDrawing();
+}
+```
+
+### function start
+- หน้าเริ่มเกมและการเซตค่าเริ่มต้น
+```
+void start(){
+    int i;
+    BeginDrawing();
+    ClearBackground(RAYWHITE);
+    DrawTextureEx(background_start, Vector2{0, 0}, 0, 5, RAYWHITE);
+    DrawTextEx(font1, "Hero Never Die", Vector2{300, 100}, 80, 10, RED);
+    DrawText("press -- ENTER -- start ", 420, 250, 30, BLACK);
+    if (IsKeyPressed(KEY_ENTER)){
+        money = 0;
+        hp_player_bar = 200, hp_boss_bar = 200;
+        hp_player = 200;
+        for (i=0; i < 4; i++)
+            boss[i][0] = 35, boss[i][1] = 20;
+        type_boss[0] = 0, type_boss[1] = 0;
+        type_player[0] = 0, type_player[1] = 0;
+        player[0] = 40, player[1] = 20, player[2] = 40, player[3] = 20;
+        items[0] = 1, items[2] = 1;
+        for (i=0; i < 4; i++)
+            price[i] = 20, level[i] = 1, buff[i] = 0;
+        for (i=1; i < 5; i++)
+            lv[i] = 0;
+        items_fight[0][0] = 40, items_fight[0][1] = 20;
+        items_fight[1][0] = 35, items_fight[1][1] = 20;
+        step_arena=0;
+        count = 1;
+        lv[1]++;
+        text_boss = 1;
+        hp_boss = 200+text_boss*20;
+        lv[0] = 1;
+        type = 0;
+        lv_bar = 0;
+        atk_player = LoadTexture("img/sword.png");
+        def_player = LoadTexture("img/armor.png");
+        atk_boss = LoadTexture("img/sword.png");
+        def_boss = LoadTexture("img/armor.png");
+        enemy = LoadTexture("img/boss00.png");
+        step = 2;
+    }
+        
+    EndDrawing();
+}
+```
