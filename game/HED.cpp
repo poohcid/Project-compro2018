@@ -299,7 +299,7 @@ void resultGame(){
     total += 30+price_lv+sur;
     BeginDrawing();
     ClearBackground(RAYWHITE);
-    DrawText(FormatText("Winner +%d $", 50+price_lv), 400, 100, 50, GREEN);
+    DrawText(FormatText("Winner +%d $", 30+price_lv), 400, 100, 50, GREEN);
     DrawText(FormatText("Bonus survivor +%d $", sur), 400, 200, 50, GREEN);
     DrawText(FormatText("Total %d $", total), 400, 300, 50, GREEN);
     if (hover(400, 700, 550, 660)){
