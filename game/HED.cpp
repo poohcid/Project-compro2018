@@ -293,17 +293,17 @@ void resultGame(){
     float result;
     for (int i=0; i < 4; i++)
         buff[i] = 0;
-    price_lv += 30+text_boss*10;
+    price_lv += 40+text_boss*10;
     if (type_player[0] == type_boss[1])
         sur += text_boss*10;
     if (type_player[1] != type_boss[0])
         sur += text_boss*10;
     if (type_player[1] != type_boss[0] && type_player[0] == type_boss[1])
         sur += text_boss*10;
-    total += 30+price_lv+sur;
+    total += 40+price_lv+sur;
     BeginDrawing();
     ClearBackground(RAYWHITE);
-    DrawText(FormatText("Winner +%d $", 30+price_lv), 400, 100, 50, GREEN);
+    DrawText(FormatText("Winner +%d $", 40+price_lv), 400, 100, 50, GREEN);
     DrawText(FormatText("Bonus survivor +%d $", sur), 400, 200, 50, GREEN);
     DrawText(FormatText("Total %d $", total), 400, 300, 50, GREEN);
     if (hover(400, 700, 550, 660)){
@@ -385,7 +385,7 @@ void start(){
         items[0] = 1, items[2] = 1;
         for (i=0; i < 4; i++)
             price[i] = 20, level[i] = 1, buff[i] = 0;
-        for (i=1; i < 4; i++)
+        for (i=1; i < 5; i++)
             lv[i] = 0;
         items_fight[0][0] = 40, items_fight[0][1] = 20;
         items_fight[1][0] = 35, items_fight[1][1] = 20;
@@ -487,7 +487,7 @@ void eventMouseHome(){
         if (type_boss[0] == 0 && type_boss[1] == 0){
             lv[1]++;
             text_boss = lv[1];
-            items_fight[1][0] = 35+(5*text_boss)+(2*lv[0]), items_fight[1][1] = 20+(3*text_boss)+(2*lv[0]);
+            items_fight[1][0] = 35+(5*text_boss)+lv[0], items_fight[1][1] = 20+(3*text_boss)+lv[0];
             hp_boss = 200+text_boss*20;
             atk_boss = LoadTexture("img/sword.png");
             def_boss = LoadTexture("img/armor.png");
@@ -496,7 +496,7 @@ void eventMouseHome(){
         if (type_boss[0] == 0 && type_boss[1] == 1){
             lv[2]++;
             text_boss = lv[2];
-            items_fight[1][0] = 35+(5*text_boss)+(2*lv[0]), items_fight[1][1] = 20+(3*text_boss)+(2*lv[0]);
+            items_fight[1][0] = 35+(5*text_boss)+lv[0], items_fight[1][1] = 20+(3*text_boss)+lv[0];
             hp_boss = 200+text_boss*20;
             atk_boss = LoadTexture("img/sword.png");
             def_boss = LoadTexture("img/shield.png");
@@ -505,7 +505,7 @@ void eventMouseHome(){
         if (type_boss[0] == 1 && type_boss[1] == 0){
             lv[3]++;
             text_boss = lv[3];
-            items_fight[1][0] = 35+(5*text_boss)+(3*lv[0]), items_fight[1][1] = 20+(3*text_boss)+(3*lv[0]);
+            items_fight[1][0] = 35+(5*text_boss)+lv[0], items_fight[1][1] = 20+(3*text_boss)+lv[0];
             hp_boss = 200+text_boss*20;
             atk_boss = LoadTexture("img/wand.png");
             def_boss = LoadTexture("img/armor.png");
@@ -514,7 +514,7 @@ void eventMouseHome(){
         if (type_boss[0] == 1 && type_boss[1] == 1){
             lv[4]++;
             text_boss = lv[4];
-            items_fight[1][0] = 35+(5*text_boss)+(2*lv[0]), items_fight[1][1] = 20+(3*text_boss)+(2*lv[0]);
+            items_fight[1][0] = 35+(5*text_boss)+lv[0], items_fight[1][1] = 20+(3*text_boss)+lv[0];
             hp_boss = 200+text_boss*20;
             atk_boss = LoadTexture("img/wand.png");
             def_boss = LoadTexture("img/shield.png");
