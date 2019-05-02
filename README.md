@@ -76,7 +76,7 @@
 คณะเทคโนโลยีสารสนเทศ
 สถาบันเทคโนโลยีพระจอมเกล้าเจ้าคุณทหารลาดกระบัง
 
-# Introduction Video
+# Demonstration Video
 Youtube: https://www.youtube.com/watch?v=YMkT4X-sNm0&feature=youtu.be
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](https://forthebadge.com)
