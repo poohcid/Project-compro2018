@@ -64,10 +64,10 @@
 # Group members
 |  |ชื่อ|GitHub Username|รหัสนักศึกษา|
 |:-:|--------|---------------|---------|
-|[![pleng1.jpg](https://www.img.live/images/2019/05/02/pleng1.jpg)](https://www.img.live/image/7Yam26)|นายชยภัทร พันรอด|(https://github.com/PlengChayapat)|61070036|
-|[![1bf84e.jpg](https://www.img.live/images/2019/05/02/1bf84e.jpg)](https://www.img.live/image/7Ya1RM)|นายภูชิต รุ่งระวิ|(https://github.com/poohcid)|61070166|
-|[![miw1.jpg](https://www.img.live/images/2019/05/02/miw1.jpg)](https://www.img.live/image/7YBaJa)|นายโยธิน บายศรี|(https://github.com/YothinBaisri)|61070179|
-|[![wei1.jpg](https://www.img.live/images/2019/05/02/wei1.jpg)](https://www.img.live/image/7YBBUH)|นายอนุชา เว่ย|(https://github.com/AnuchaWei1995)|61070257|
+|[![pleng1.jpg](https://www.img.live/images/2019/05/02/pleng1.jpg)](https://www.img.live/image/7Yam26)|นายชยภัทร พันรอด|https://github.com/PlengChayapat|61070036|
+|[![1bf84e.jpg](https://www.img.live/images/2019/05/02/1bf84e.jpg)](https://www.img.live/image/7Ya1RM)|นายภูชิต รุ่งระวิ|https://github.com/poohcid|61070166|
+|[![miw1.jpg](https://www.img.live/images/2019/05/02/miw1.jpg)](https://www.img.live/image/7YBaJa)|นายโยธิน บายศรี|https://github.com/YothinBaisri|61070179|
+|[![wei1.jpg](https://www.img.live/images/2019/05/02/wei1.jpg)](https://www.img.live/image/7YBBUH)|นายอนุชา เว่ย|https://github.com/AnuchaWei1995|61070257|
 
 # Assistant Teacher
 | |name|
