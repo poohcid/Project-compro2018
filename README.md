@@ -62,14 +62,19 @@
 
 
 # Group members
-1.นายชยภัทร พันรอด 61070036 <br>
-2.นายภูชิต รุ่งระวิ 61070166 <br>
-3.นายโยธิน บายศรี 61070179 <br>
-4.นายอนุชา เว่ย 61070257 <br>
+|  |ชื่อ|GitHub Username|รหัสนักศึกษา|
+|:-:|--------|---------------|---------|
+|[![pleng1.jpg](https://www.img.live/images/2019/05/02/pleng1.jpg)](https://www.img.live/image/7Yam26)|นายชยภัทร พันรอด|(https://github.com/PlengChayapat)|61070036|
+|[![1bf84e.jpg](https://www.img.live/images/2019/05/02/1bf84e.jpg)](https://www.img.live/image/7Ya1RM)|นายภูชิต รุ่งระวิ|(https://github.com/poohcid)|61070166|
+|[![miw1.jpg](https://www.img.live/images/2019/05/02/miw1.jpg)](https://www.img.live/image/7YBaJa)|นายโยธิน บายศรี|(https://github.com/YothinBaisri)|61070179|
+|[![wei1.jpg](https://www.img.live/images/2019/05/02/wei1.jpg)](https://www.img.live/image/7YBBUH)|นายอนุชา เว่ย|(https://github.com/AnuchaWei1995)|61070257|
 
 # Assistant Teacher
-รศ.ดร.กิติ์สุชาต พสุภา <br>
-รศ.ดร.ปานวิทย์ ธุวะนุติ <br><br>
+| |name|
+|:-:|--------|
+|[![ong1.jpg](https://www.img.live/images/2019/05/02/ong1.jpg)](https://www.img.live/image/7YBxZi)|รศ.ดร.กิติ์สุชาต พสุภา|
+|[![panwit1.jpg](https://www.img.live/images/2019/05/02/panwit1.jpg)](https://www.img.live/image/7YB3Sy)|รศ.ดร.ปานวิทย์ ธุวะนุติ|
+# 
 รายงาน และ ซอร์สโค้ดนี้ เป็นส่วนหนึ่งของวิชา การสร้างโปรแกรมคอมพิวเตอร์ Computer Programming (06016315)
 หลักสูตรวิทยาศาสตร์บัณฑิต สาขาวิชาเทคโนโลยีสารสนเทศ
 ภาคเรียนที่ 2 ปีการศึกษา 2561
