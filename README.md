@@ -67,6 +67,10 @@
 3.นายโยธิน บายศรี 61070179 <br>
 4.นายอนุชา เว่ย 61070257 <br>
 
+# Assistant Teacher
+รศ.ดร.กิติ์สุชาต พสุภา <br>
+รศ.ดร.ปานวิทย์ ธุวะนุติ <br>
+
 # Introduction Video
 Youtube: https://www.youtube.com/watch?v=YMkT4X-sNm0&feature=youtu.be
 
